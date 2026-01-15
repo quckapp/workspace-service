@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
-	"github.com/quckchat/workspace-service/internal/models"
+	"github.com/quckapp/workspace-service/internal/models"
 )
 
 type WorkspaceRepository struct {

@@ -9,11 +9,11 @@ import (
 	"time"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/quckchat/workspace-service/internal/api"
-	"github.com/quckchat/workspace-service/internal/config"
-	"github.com/quckchat/workspace-service/internal/db"
-	"github.com/quckchat/workspace-service/internal/repository"
-	"github.com/quckchat/workspace-service/internal/service"
+	"github.com/quckapp/workspace-service/internal/api"
+	"github.com/quckapp/workspace-service/internal/config"
+	"github.com/quckapp/workspace-service/internal/db"
+	"github.com/quckapp/workspace-service/internal/repository"
+	"github.com/quckapp/workspace-service/internal/service"
 	"github.com/sirupsen/logrus"
 )
 

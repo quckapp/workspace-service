@@ -2,9 +2,9 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/quckchat/workspace-service/internal/config"
-	"github.com/quckchat/workspace-service/internal/middleware"
-	"github.com/quckchat/workspace-service/internal/service"
+	"github.com/quckapp/workspace-service/internal/config"
+	"github.com/quckapp/workspace-service/internal/middleware"
+	"github.com/quckapp/workspace-service/internal/service"
 	"github.com/sirupsen/logrus"
 )
 

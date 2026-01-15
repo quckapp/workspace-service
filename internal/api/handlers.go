@@ -6,8 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/quckchat/workspace-service/internal/models"
-	"github.com/quckchat/workspace-service/internal/service"
+	"github.com/quckapp/workspace-service/internal/models"
+	"github.com/quckapp/workspace-service/internal/service"
 	"github.com/sirupsen/logrus"
 )
 

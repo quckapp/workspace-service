@@ -28,7 +28,7 @@ func Load() (*Config, error) {
 	return &Config{
 		Port:         getEnv("PORT", "3002"),
 		Environment:  getEnv("ENVIRONMENT", "development"),
-		DatabaseURL:  getEnv("DATABASE_URL", "root:password@tcp(localhost:3306)/quckchat_workspaces?parseTime=true"),
+		DatabaseURL:  getEnv("DATABASE_URL", "root:password@tcp(localhost:3306)/quckapp_workspaces?parseTime=true"),
 		RedisURL:     getEnv("REDIS_URL", "localhost:6379"),
 		KafkaBrokers: strings.Split(kafkaBrokers, ","),
 		JWTSecret:    getEnv("JWT_SECRET", "your-secret-key"),

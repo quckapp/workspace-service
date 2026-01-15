@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/quckchat/workspace-service/internal/db"
-	"github.com/quckchat/workspace-service/internal/models"
-	"github.com/quckchat/workspace-service/internal/repository"
+	"github.com/quckapp/workspace-service/internal/db"
+	"github.com/quckapp/workspace-service/internal/models"
+	"github.com/quckapp/workspace-service/internal/repository"
 	"github.com/redis/go-redis/v9"
 	"github.com/sirupsen/logrus"
 )

@@ -1,4 +1,4 @@
-module github.com/quckchat/workspace-service
+module github.com/quckapp/workspace-service
 
 go 1.21
 
