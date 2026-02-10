@@ -65,3 +65,20 @@ func (r *InviteRepository) Delete(ctx context.Context, id uuid.UUID) error {
 	_, err := r.db.ExecContext(ctx, query, id)
 	return err
 }
+
+func (r *InviteRepository) GetPendingCount(ctx context.Context, workspaceID uuid.UUID) (int, error) {
+	var count int
+	query := `SELECT COUNT(*) FROM workspace_invites WHERE workspace_id = ? AND accepted_at IS NULL AND expires_at > NOW()`
+	err := r.db.GetContext(ctx, &count, query, workspaceID)
+	return count, err
+}
+
+func (r *InviteRepository) GetByID(ctx context.Context, id uuid.UUID) (*models.WorkspaceInvite, error) {
+	var inv models.WorkspaceInvite
+	query := `SELECT * FROM workspace_invites WHERE id = ?`
+	err := r.db.GetContext(ctx, &inv, query, id)
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+	return &inv, err
+}

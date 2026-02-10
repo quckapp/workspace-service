@@ -78,3 +78,13 @@ func (r *MemberRepository) GetRole(ctx context.Context, workspaceID, userID uuid
 	err := r.db.GetContext(ctx, &role, query, workspaceID, userID)
 	return role, err
 }
+
+func (r *MemberRepository) GetByID(ctx context.Context, workspaceID, userID uuid.UUID) (*models.WorkspaceMember, error) {
+	var m models.WorkspaceMember
+	query := `SELECT * FROM workspace_members WHERE workspace_id = ? AND user_id = ? AND is_active = TRUE`
+	err := r.db.GetContext(ctx, &m, query, workspaceID, userID)
+	if err == sql.ErrNoRows {
+		return nil, nil
+	}
+	return &m, err
+}
